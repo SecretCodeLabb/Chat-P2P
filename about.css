@@ -1,0 +1,56 @@
+:root{
+  --ink:#111; --muted:#6b6f76; --thin:#e9eaec; --accent:#12a28e; --accent2:#f2b705;
+}
+.container{max-width:1200px; margin:auto; padding:24px 16px}
+.muted{color:var(--muted)}
+.pill{display:inline-block; background:#000; color:#fff; padding:.35rem .6rem; border-radius:999px; font-weight:800; font-size:.8rem}
+.btn{display:inline-flex; align-items:center; gap:8px; padding:.6rem .9rem; border-radius:999px; background:#000; color:#fff; border:1px solid #000; text-decoration:none; font-weight:800}
+.btn.alt{background:var(--accent); color:#0a0b0c; border-color:var(--accent)}
+.btn:hover{filter:brightness(1.07)}
+
+/* HERO */
+.hero{position:relative; width:100vw; margin-left:calc(50% - 50vw); border-bottom:1px solid var(--thin)}
+.hero__media{height:56vh; background:center/cover no-repeat; background-image:linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.35)), url('talleres imagenes/headers/semillero_hero.jpg');}
+.hero__cap{color:#fff; padding:16px 0 28px}
+.hero__title{font-size:clamp(1.6rem, 3vw, 2.6rem); font-weight:900; margin:12px 0}
+.hero__lead{max-width:900px; font-size:1.05rem}
+.hero__tags{display:flex; gap:10px; margin-top:12px}
+
+/* BLOQUES */
+.blocks{display:grid; gap:16px; grid-template-columns: repeat(3, minmax(0,1fr)); border-bottom:1px solid var(--thin); padding-bottom:24px}
+.blocks .block{padding:10px; border:1px solid var(--thin); border-radius:16px; background:#fff}
+.blocks h2{margin:8px 0; font-size:1.2rem}
+
+/* EQUIPO */
+.team{padding:24px 0}
+.team__head{display:flex; align-items:end; justify-content:space-between; gap:16px; margin-bottom:16px; border-top:1px solid var(--thin); padding-top:16px}
+.team__grid{display:grid; gap:16px; grid-template-columns: repeat(4, minmax(0,1fr))}
+.card{background:#fff; border:1px solid var(--thin); border-radius:16px; overflow:hidden}
+.card__img{display:block; width:100%; aspect-ratio: 4 / 3; object-fit:cover}
+.card__body{padding:10px 12px}
+.card__name{font-weight:900}
+.card__role{color:var(--muted)}
+
+/* MANIFIESTO */
+.manifesto{border-top:1px solid var(--thin); padding-top:24px}
+.manifesto__list{display:grid; gap:10px; padding-left:18px}
+
+/* CONTACTO */
+.contact{border-top:1px solid var(--thin); padding-top:24px}
+.contact__grid{display:flex; gap:10px; flex-wrap:wrap}
+
+/* FOOTER */
+.footer{border-top:1px solid var(--thin); padding:18px 0; background:#fff; color:var(--ink)}
+
+/* Responsive */
+@media (max-width:1000px){
+  .team__grid{grid-template-columns: repeat(3, minmax(0,1fr))}
+  .blocks{grid-template-columns: 1fr 1fr}
+}
+@media (max-width:700px){
+  .team__grid{grid-template-columns: repeat(2, minmax(0,1fr))}
+  .hero__media{height:42vh}
+}
+@media (max-width:460px){
+  .team__grid{grid-template-columns: 1fr}
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CHAT P2P — Inicio</title>
+  <link rel="icon" type="image/png" href="talleres imagenes/logos/Pj Semillero.png">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+  <img src="talleres imagenes/logos/Logo semillero.png" alt="Logo Chat P2P" class="logo-img">
+  <span>CHAT P2P Inteligencia popular</span>
+</a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">INICIO</a></li>
+          <li><a href="about.html" class="nav-link">NOSOTROS</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="hero">
+      <div class="hero-content">
+        <h1>CHAT P2P</h1>
+        <h2>Inteligencia Popular</h2>
+        <p> es una iniciativa de investigación y creación que tiene como objetivo principal democratizar y territorializar el conocimiento en arte y tecnología.</p>
+      </div>
+    </section>
+
+    <section class="gallery-container">
+      <h2 class="section-title">NUESTRO TRABAJO</h2>
+      <div class="gallery">
+        <div class="gallery-item size-large" data-id="1">
+          <div class="newspaper-clip"></div>
+          <div class="item-content">
+            <img src="talleres imagenes\IMG_0867.JPG" alt="Proyecto 1" class="item-image">
+            <div class="item-overlay">
+              <div class="overlay-text">
+                <h3>La Tronadora</h3>
+                <p>Ver más detalles</p>
+              </div>
+            </div>
+          </div>
+          <div class="item-info">
+            <h3>Conoce LA TRONADORA</h3>
+            <p>LA TRONADORA es la celula de trabajo que nos permite desplazarnos y hacer diferentes talleres y actividades en diferentes ubicaciones.Conoce sobre el proceso de creacion.</p>
+            <p>Conoce sobre el proceso de creaccion de LA TRONADORA</p>
+            <span class="item-tag">DIGITAL</span>
+          </div>
+        </div>
+
+        <div class="gallery-item size-medium" data-id="2">
+          <div class="newspaper-clip"></div>
+          <div class="item-content">
+            <video class="item-video" muted loop>
+              <source src="talleres imagenes\videoprueba.mp4" type="video/mp4">
+            </video>
+            <div class="item-overlay">
+              <div class="overlay-text">
+                <h3>CHAT P2P</h3>
+                <p>Ver más detalles</p>
+              </div>
+            </div>
+          </div>
+          <div class="item-info">
+            <h3>Conoce mas sobre el proyecto chat P2P</h3>
+            <p>Chat P2P – Inteligencia Popular es una iniciativa de investigación y creación que busca democratizar y territorializar el conocimiento en arte y tecnología.</p>
+            <span class="item-tag">VIDEO</span>
+          </div>
+        </div>
+
+    </section>
+    <!-- SECTION: Hero Carrusel con texto fijo -->
+<section class="carousel-hero" aria-label="Collage experimental">
+  <div class="carousel" id="heroCarousel">
+    <div class="carousel-track">
+      <img class="carousel-slide" src="talleres imagenes/carrusel/Screenshot 2025-09-18 142154.png" alt="Slide 1">
+      <img class="carousel-slide" src="talleres imagenes/carrusel/Screenshot 2025-09-18 142218.png" alt="Slide 2">
+      <img class="carousel-slide" src="talleres imagenes/carrusel/Screenshot 2025-09-18 142231.png" alt="Slide 3">
+    </div>
+  </div>
+
+  <!-- Texto fijo encima del carrusel -->
+  <div class="carousel-overlay">
+    <h2 class="carousel-title">
+      <span>Video</span>
+      <span>Mapping</span>
+    </h2>
+    <p class="carousel-subtitle">
+      Este taller propone una inmersión creativa donde los participantes
+      construirán la narrativa de su barrio a través de la creación de un
+      videomapping
+    </p>
+
+    <!-- líneas decorativas tipo guía (opcionales) -->
+    <div class="overlay-lines" aria-hidden="true"></div>
+  </div>
+</section>
+
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+    <section class="gallery-container">
+      <h2 class="section-title">TALLERES</h2>
+      <div class="gallery">
+        <div class="gallery-item size-large" data-id="w1">
+          <div class="newspaper-clip"></div>
+          <div class="item-content">
+            <img src="talleres imagenes/DSC_0082.JPG" alt="Taller 1" class="item-imagetalleres">
+            <div class="item-overlay">
+              <div class="overlay-text">
+                <h3>Kewpies</h3>
+                <p>Ver más detalles</p>
+              </div>
+            </div>
+          </div>
+          <div class="item-info">
+            <h3>Taller de pintura de Kewpies</h3>
+            <p>Conoce como transformar los kewpies de nuestro personaje del semillero utilizando porcelanicron y pintura.</p>
+            <span class="item-tag">Kewpies</span>
+          </div>
+        </div>
+
+        <div class="gallery-item size-medium" data-id="w2">
+          <div class="newspaper-clip"></div>
+          <div class="item-content">
+            <img src="talleres imagenes\Screenshot 2025-09-18 145526.png" alt="Taller 2" class="item-image">
+            <div class="item-overlay">
+              <div class="overlay-text">
+                <h3>Poster</h3>
+                <p>Ver más detalles</p>
+              </div>
+            </div>
+          </div>
+          <div class="item-info">
+            <h3>Taller de poster experimental</h3>
+            <p>Usa diferentes tecnicas para crear tu poster.</p>
+            <span class="item-tag">Poster</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Semillero Modelado sensorial: Realidades mutantes.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
