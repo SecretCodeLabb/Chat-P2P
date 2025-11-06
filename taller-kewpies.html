@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat P2P - Kewpies</title>
+    <link rel="icon" href="logos\Logo semillero.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      /* === Carrusel adaptable (añadido) === */
+      .carousel-section {
+        padding: 2rem;
+        background: var(--light-gray, #f5f5f5);
+      }
+      .carousel {
+        max-width: 1100px;
+        margin: 0 auto;
+        position: relative;
+      }
+      .carousel-viewport {
+        width: 100%;
+        background: #000;                 /* marco negro útil para fotos verticales */
+        border: 10px solid #fff;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        overflow: hidden;
+      }
+      .carousel-track {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+      .carousel-slide {
+        flex: 0 0 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .carousel-slide img {
+        max-width: 100%;
+        height: auto;            /* respeta la proporción real */
+        display: block;
+        object-fit: contain;     /* no recorta */
+        aspect-ratio: auto;      /* usa el ratio natural */
+      }
+      .carousel-caption {
+        position: absolute;
+        left: 0; right: 0; bottom: 0;
+        background: linear-gradient(transparent, rgba(0,0,0,0.75));
+        color: #fff;
+        padding: 1rem 1rem 1.25rem;
+        text-align: center;
+      }
+      .carousel-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255,255,255,0.92);
+        border: none;
+        width: 42px;
+        height: 42px;
+        cursor: pointer;
+        font-size: 1.25rem;
+        color: var(--primary-color, #1a1a1a);
+        transition: var(--transition, all .3s ease);
+        border-radius: 999px;
+      }
+      .carousel-nav:hover {
+        background-color: #fff;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      }
+      .carousel-nav.prev { left: 14px; }
+      .carousel-nav.next { right: 14px; }
+
+      .carousel-indicators {
+        position: absolute;
+        bottom: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+      }
+      .indicator {
+        width: 10px; height: 10px;
+        border-radius: 50%;
+        background-color: rgba(255,255,255,0.55);
+        cursor: pointer;
+        transition: var(--transition, all .3s ease);
+      }
+      .indicator.active { background-color: #fff; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="brand">
+                <img src="logos/Logo semillero.png" alt="Art Collective logo" class="brand-logo" onerror="this.style.display='none'">
+                <span class="brand-title">CHAT P2P </span>
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav>
+                <ul id="primary-menu" class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="about.html">Conocenos</a></li>
+                    <li><a href="gallery.html">Talleres y trabajos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="cards-section" style="padding-top:3.5rem;">
+            <div class="card-grid" style="max-width:1100px; margin:0 auto;">
+                <article class="card">
+                    <p><strong>Taller de pintura de Kewpies</strong></p>
+                    
+                    <div class="card-content">
+                        <h2 class="card-title">¿Que son los Kewpies?</h2>
+                        <p class="card-text">Son pequeñas figuras impresas en 3D que pueden ser personalizadas con porcelanicron y pintura para crear diferentes personajes e historias.</p>
+                        <p>El ultimo taller de Kewpies realizado:Este taller fue realizado en el Tecnologico de Artes Debora Arango en el evento de el seminario internacional de investigacion.</p>
+                    </div>
+                </article>
+            </div>
+
+            <!-- ====== Carrusel adaptable (reemplaza el bloque de 2 imágenes sueltas) ====== -->
+            <section class="carousel-section" aria-label="Galería de Kewpies">
+              <div class="carousel">
+                <div class="carousel-viewport">
+                  <div class="carousel-track">
+                    <!-- Slide 1 -->
+                    <figure class="carousel-slide">
+                      <img src="imagenesKewpies\1 - Copy.jpg" alt="Proceso de taller Kewpies 1">
+                    </figure>
+                    <!-- Slide 2 -->
+                    <figure class="carousel-slide">
+                      <img src="imagenesKewpies\2 - Copy.jpg" alt="Proceso de taller Kewpies 2">
+                    </figure>
+
+                    <figure class="carousel-slide">
+                      <img src="imagenesKewpies\3 - Copy.jpg" alt="Proceso de taller Kewpies 2">
+                    </figure>
+
+                    <figure class="carousel-slide">
+                      <img src="imagenesKewpies\4 - Copy.jpg" alt="Proceso de taller Kewpies 2">
+                    </figure>
+
+                    <figure class="carousel-slide">
+                      <img src="imagenesKewpies\5 - Copy.jpg" alt="Proceso de taller Kewpies 2">
+                    </figure>
+
+                    <figure class="carousel-slide">
+                      <img src="imagenesKewpies\6 - Copy.jpg" alt="Proceso de taller Kewpies 2">
+                    </figure>
+
+                    <figure class="carousel-slide">
+                      <img src="imagenesKewpies\7 - Copy.jpg" alt="Proceso de taller Kewpies 2">
+                    </figure>
+
+                    <figure class="carousel-slide">
+                      <img src="imagenesKewpies\8 - Copy.jpg" alt="Proceso de taller Kewpies 2">
+                    </figure>
+
+                    <figure class="carousel-slide">
+                      <img src="imagenesKewpies\9 - Copy.jpg" alt="Proceso de taller Kewpies 2">
+                    </figure>
+
+                    <figure class="carousel-slide">
+                      <img src="imagenesKewpies\10 - Copy.jpg" alt="Proceso de taller Kewpies 2">
+                    </figure>
+
+                    <figure class="carousel-slide">
+                      <img src="imagenesKewpies\11 - Copy.jpg" alt="Proceso de taller Kewpies 2">
+                    </figure>
+
+                    <figure class="carousel-slide">
+                      <img src="imagenesKewpies\12 - Copy.jpg" alt="Proceso de taller Kewpies 2">
+                    </figure>
+                    
+                    
+                  </div>
+                </div>
+
+                <button class="carousel-nav prev" aria-label="Anterior" type="button">‹</button>
+                <button class="carousel-nav next" aria-label="Siguiente" type="button">›</button>
+                <div class="carousel-indicators" id="carousel-indicators"></div>
+              </div>
+
+              <a href="index.html" style="display:inline-block; margin-top:1rem; padding:0.6rem 1rem; background:var(--secondary-color); color:white; border-radius:6px; text-decoration:none;">Volver al Inicio</a>
+            </section>
+            <!-- ====== /Carrusel ====== -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://instagram.com/realidades_mutantes">Instagram</a>
+            </div>
+            <p>&copy; 2025 Modelado sensorial realidades mutantes - Chat P2P Inteligencia Popular</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle (same script as index.html)
+        (function() {
+            const toggle = document.querySelector('.nav-toggle');
+            const menu = document.getElementById('primary-menu');
+            if (toggle && menu) {
+                toggle.addEventListener('click', () => {
+                    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+                    toggle.setAttribute('aria-expanded', String(!expanded));
+                    menu.classList.toggle('open');
+                });
+            }
+        })();
+
+        // Smooth scrolling only for in-page anchor links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            });
+        });
+
+        // === Carousel JS (añadido) ===
+        (function(){
+          const track = document.querySelector('.carousel-track');
+          const slides = document.querySelectorAll('.carousel-slide');
+          const prevBtn = document.querySelector('.carousel-nav.prev');
+          const nextBtn = document.querySelector('.carousel-nav.next');
+          const dotsWrap = document.getElementById('carousel-indicators');
+
+          if (!track || !slides.length) return;
+
+          let current = 0;
+          let autoplay;
+
+          // Crear indicadores
+          function buildDots() {
+            dotsWrap.innerHTML = '';
+            slides.forEach((_, i) => {
+              const dot = document.createElement('span');
+              dot.className = 'indicator' + (i === 0 ? ' active' : '');
+              dot.addEventListener('click', () => goTo(i));
+              dotsWrap.appendChild(dot);
+            });
+          }
+
+          function updateDots() {
+            const dots = document.querySelectorAll('.indicator');
+            dots.forEach(d => d.classList.remove('active'));
+            if (dots[current]) dots[current].classList.add('active');
+          }
+
+          function goTo(index) {
+            const total = slides.length;
+            current = (index + total) % total;
+            track.style.transform = `translateX(-${current * 100}%)`;
+            updateDots();
+          }
+
+          function next(){ goTo(current + 1); }
+          function prev(){ goTo(current - 1); }
+
+          // Autoplay (opcional)
+          function startAutoplay(){
+            stopAutoplay();
+            autoplay = setInterval(next, 5000);
+          }
+          function stopAutoplay(){
+            if (autoplay) clearInterval(autoplay);
+          }
+
+          // Eventos
+          nextBtn && nextBtn.addEventListener('click', next);
+          prevBtn && prevBtn.addEventListener('click', prev);
+
+          const carousel = document.querySelector('.carousel');
+          if (carousel){
+            carousel.addEventListener('mouseenter', stopAutoplay);
+            carousel.addEventListener('mouseleave', startAutoplay);
+          }
+
+          // Init
+          buildDots();
+          goTo(0);
+          startAutoplay();
+        })();
+    </script>
+</body>
+</html>

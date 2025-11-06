@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chat P2P — La Tronadora</title>
+  <link rel="icon" href="logos\Logo semillero.png" type="image/png">
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- Estilos para que cada imagen conserve su proporción y no se recorte -->
+  <style>
+    :root{
+      --page-padding: clamp(12px, 3vw, 24px);
+      --maxw: 1100px;
+      --radius: 14px;
+    }
+    main{ padding-top:3.5rem; }
+
+    /* Sección contenedora (sin forzar altura de pantalla) */
+    .v-section{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: var(--page-padding);
+      background: #000; /* opcional: marco negro tipo “pantalla de cine” */
+    }
+
+    /* Marco de la imagen (sin aspect-ratio fijo) */
+    .v-wrap{
+      width: min(100%, var(--maxw));
+      position: relative;
+      overflow: hidden;       /* mantiene bordes redondeados y la leyenda superpuesta dentro */
+      border-radius: var(--radius);
+      background: #000;
+      box-shadow: 0 10px 30px rgba(0,0,0,.18);
+    }
+
+    /* Imagen: ocupa el ancho, conserva altura natural. NO se recorta. */
+    .v-wrap img{
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;    /* por si en algún caso se define altura */
+    }
+
+    /* Leyenda superpuesta en degradado (no afecta el tamaño de la imagen) */
+    .v-caption{
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 12px 16px;
+      font-size: clamp(14px, 2.3vw, 16px);
+      line-height: 1.3;
+      color: #fff;
+      background: linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,0));
+    }
+
+    /* CTA de descarga */
+    .cta{
+      display: grid;
+      place-items: center;
+      padding: 2rem var(--page-padding) 3.5rem;
+      background: #0d0d0d;
+      color: #fff;
+      text-align: center;
+    }
+    .cta-inner{
+      width: min(100%, var(--maxw));
+      border: 1px solid #2a2a2a;
+      border-radius: var(--radius);
+      padding: clamp(16px, 3vw, 24px);
+    }
+    .btn{
+      display: inline-block;
+      margin-top: .8rem;
+      padding: .75rem 1.1rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      background: var(--secondary-color, #4f46e5);
+      color: #fff;
+      transition: transform .08s ease, opacity .2s ease;
+    }
+    .btn:hover{ transform: translateY(-1px); opacity: .95; }
+    .btn:active{ transform: translateY(0); }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <a href="index.html" class="brand">
+        <img src="logos/Logo semillero.png" alt="Logo Chat P2P" class="brand-logo" onerror="this.style.display='none'">
+        <span class="brand-title">CHAT P2P</span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+
+      <nav>
+        <ul id="primary-menu" class="nav-menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="about.html">Conócenos</a></li>
+          <li><a href="gallery.html">Talleres y trabajos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    
+
+    <!-- Título y descripción -->
+    <section class="intro-section">
+    <div class="intro-container">
+        <h1 class="intro-title">Fanzine — Chat P2P</h1>
+        <p class="intro-text">
+        Este fanzine recopila los procesos, ideas y experimentaciones desarrolladas en el semillero 
+        <strong>Modelado Sensorial – Realidades Mutantes</strong>. 
+        Cada página refleja una exploración entre arte, tecnología y territorio, 
+        vinculando la creación colectiva con los saberes populares.
+        </p>
+    </div>
+    </section>
+      <!-- VISOR DE PDF tipo libro -->
+<section class="v-section" id="pdf-viewer">
+  <div class="v-wrap" style="aspect-ratio:16/9;">
+    <iframe src="FanzineChatP2P.pdf#toolbar=1"
+        style="width:100%; height:80vh; border:none; border-radius:14px;"></iframe>
+  </div>
+</section>
+    <!-- CTA de descarga -->
+    <section class="cta" id="descarga">
+      <div class="cta-inner">
+        <h2 style="margin:0 0 .3rem 0;">Descarga el fanzine en PDF</h2>
+        <p style="opacity:.9; margin:0 0 .8rem 0;">
+        </p>
+        <a class="btn" href="FanzineChatP2P.pdf" download>Descargar</a>
+      </div>
+    </section>
+   
+
+
+
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="https://instagram.com/realidades_mutantes/">Instagram</a>
+      </div>
+      <p>&copy; 2025 Modelado sensorial realidades mutantes - Chat P2P Inteligencia Popular</p>
+    </div>
+  </footer>
+
+  <script>
+    // Toggle menú móvil
+    (function () {
+      const toggle = document.querySelector('.nav-toggle');
+      const menu = document.getElementById('primary-menu');
+      if (toggle && menu) {
+        toggle.addEventListener('click', () => {
+          const expanded = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', String(!expanded));
+          menu.classList.toggle('open');
+        });
+      }
+    })();
+
+    // Scroll suave sólo si es ancla interna
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

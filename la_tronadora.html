@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat P2P - LA TRONADORA</title>
+    <link rel="icon" href="logos\Logo semillero.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="brand">
+                <img src="logos/Logo semillero.png" alt="Art Collective logo" class="brand-logo" onerror="this.style.display='none'">
+                <span class="brand-title">CHAT P2P </span>
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav>
+                <ul id="primary-menu" class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="about.html">Conocenos</a></li>
+                    <li><a href="gallery.html">Talleres y trabajos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="cards-section" style="padding-top:3.5rem;">
+            <div class="card-grid" style="max-width:1100px; margin:0 auto;">
+                <article class="card">
+                    <p><strong>Proceso de creacion de LA TRONADORA</strong></p>
+                    <div class="video-container">
+                        <video class="card-media" controls poster="media/detail-poster.jpg">
+                            <source src="Semillero video 2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="card-title">Proceso de Desarrollo</h2>
+                        <p class="card-text">Se concibio como un módulo itinerante —una célula móvil de trabajo— capaz de desplazarse por distintos territorios del municipio de Envigado. Este espacio se plantea como un laboratorio cultural y tecnológico que facilite la creación de una agenda participativa, abierta al diálogo entre arte, tecnología y saberes populares.</p>
+
+                        <h3>Funciones de la tronadora</h3>
+                        <ul>
+                            <li>Estacion de serigrafia</li>
+                            <li>Estacion de stencil</li>
+                            <li>Estacion de grabado con prensa</li>
+                            <li>Exponer piezas artisticas creadas</li>
+                            <li>Poder llevarse a muchos lugares</li>
+                        </ul>
+                        <img src="tronaodra2iamgen.JPG" alt="Detail image 1" style="width:100%; height:auto; margin-top:1rem; border-radius:8px;">
+
+
+                    </div>
+                </article>
+            </div>
+
+            <div class="cards-section" style="padding-top:2rem;">
+                <div class="card-grid">
+                    <article class="card media-card">
+                        <img class="card-media" src="jptronadora.JPG" alt="Additional image 1">
+                        <div class="card-content">
+                        </div>
+                    </article>
+
+                    <article class="card media-card">
+                        <img class="card-media" src="DSC_0715.JPG" alt="Additional image 2">
+                        <div class="card-content">
+                      </div>
+                    </article>
+                </div>
+                    <a href="index.html" style="display:inline-block; margin-top:1rem; padding:0.6rem 1rem; background:var(--secondary-color); color:white; border-radius:6px; text-decoration:none;">Volver al Inicio</a>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://instagram.com/realidades_mutantes">Instagram</a>
+            </div>
+            <p>&copy; 2025 Modelado sensorial realidades mutantes - Chat P2P Inteligencia Popular</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle (same script as index.html)
+        (function() {
+            const toggle = document.querySelector('.nav-toggle');
+            const menu = document.getElementById('primary-menu');
+            if (toggle && menu) {
+                toggle.addEventListener('click', () => {
+                    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+                    toggle.setAttribute('aria-expanded', String(!expanded));
+                    menu.classList.toggle('open');
+                });
+            }
+        })();
+
+        // Smooth scrolling only for in-page anchor links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

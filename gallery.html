@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat P2P - Talleres</title>
+    <link rel="icon" href="logos\Logo semillero.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional styles specific to this page */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .tab-button {
+            background: none;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: var(--transition);
+            color: var(--text-color);
+        }
+        
+        .tab-button.active {
+            color: var(--secondary-color);
+            border-bottom-color: var(--secondary-color);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="brand">
+                <img src="logos/Logo semillero.png" alt="Art Collective logo" class="brand-logo" onerror="this.style.display='none'">
+                <span class="brand-title">CHAT P2P </span>
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav>
+                <ul id="primary-menu" class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="about.html">Conocenos</a></li>
+                    <li><a href="gallery.html">Talleres y trabajos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Duplicable Gallery Cards Section -->
+        <section class="cards-section" id="collections">
+            <h2 class="section-title">Talleres</h2>
+            <div class="card-grid">
+                <!-- Gallery Card - Image -->
+                <article class="card">
+                    <img class="card-media" src="tallerKewpies/5.jpg" alt="Collection piece 1">
+                    <div class="card-content">
+                        <h3 class="card-title">Taller de pintura de Kewpies</h3>
+                        <p class="card-text">Conoce como transformar los kewpies de nuestro personaje del semillero utilizando porcelanicron y pintura.</p>
+
+                        <a href="taller-kewpies.html" class="card-text" style="color: var(--secondary-color); font-weight:600; display:inline-block; margin-top:0.6rem;">
+                            Ver Taller →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Gallery Card - Video (iframe) -->
+                <article class="card">
+                    <img class="card-media" src="tallerposter\IMG_4609.jpg" alt="Collection piece 1">
+                    <div class="card-content">
+                        <h3 class="card-title">Taller de poster experimental</h3>
+                        <p class="card-text">Usa diferentes tecnicas para crear tu poster.</p>
+
+                        <a href="taller-poster-experimental.html" class="card-text" style="color: var(--secondary-color); font-weight:600; display:inline-block; margin-top:0.6rem;">
+                            Ver Taller →
+                        </a>
+                    </div>
+                </article>
+
+                
+            </div>
+        </section>
+        <h2 class="section-title">Arte Popular y tecnologia</h2>
+        
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab(event, 'gallery-tab')">VideoMapping</button>
+            <button class="tab-button" onclick="openTab(event, 'videos-tab')">Mas trabajos</button>
+        </div>
+
+        <div id="gallery-tab" class="tab-content active">
+            <section class="carousel-section">
+                <div class="carousel-container">
+                    <div class="carousel-wrapper">
+                        <div class="carousel-slide">
+                            <img src="carrusel\Screenshot 2025-09-18 142154.png" alt="Artwork 1">
+                            <div class="carousel-caption">
+                                <h3>Mapping</h3>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="carrusel\Screenshot 2025-09-18 142218.png" alt="Artwork 2">
+                            <div class="carousel-caption">
+                                <h3>Proyectando dibujos en tiempo real</h3>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="carrusel\Screenshot 2025-09-18 142231.png" alt="Artwork 3">
+                            <div class="carousel-caption">
+                                <h3>Espacio Intervenido</h3>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <button class="carousel-nav prev" onclick="changeSlide(-1)">‹</button>
+                    <button class="carousel-nav next" onclick="changeSlide(1)">›</button>
+                    <div class="carousel-indicators">
+                        <span class="indicator active" onclick="currentSlide(1)"></span>
+                        <span class="indicator" onclick="currentSlide(2)"></span>
+                        <span class="indicator" onclick="currentSlide(3)"></span>
+                        <span class="indicator" onclick="currentSlide(4)"></span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="videos-tab" class="tab-content">
+            <section class="videos-section">
+                <h2 class="section-title">Proximamente</h2>
+            </section>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://instagram.com/realidades_mutantes">Instagram</a>
+            </div>
+            <p>&copy; 2025 Modelado sensorial realidades mutantes - Chat P2P Inteligencia Popular</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        (function() {
+            const toggle = document.querySelector('.nav-toggle');
+            const menu = document.getElementById('primary-menu');
+            if (toggle && menu) {
+                toggle.addEventListener('click', () => {
+                    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+                    toggle.setAttribute('aria-expanded', String(!expanded));
+                    menu.classList.toggle('open');
+                });
+            }
+        })();
+
+        // Tab functionality
+        function openTab(evt, tabName) {
+            const tabContents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+            
+            const tabButtons = document.getElementsByClassName("tab-button");
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+            
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        // Carousel functionality
+        let currentSlideIndex = 1;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const indicators = document.querySelectorAll('.indicator');
+        const wrapper = document.querySelector('.carousel-wrapper');
+
+        function showSlide(n) {
+            if (n > slides.length) currentSlideIndex = 1;
+            if (n < 1) currentSlideIndex = slides.length;
+            
+            wrapper.style.transform = `translateX(-${(currentSlideIndex - 1) * 100}%)`;
+            
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            indicators[currentSlideIndex - 1].classList.add('active');
+        }
+
+        function changeSlide(n) {
+            currentSlideIndex += n;
+            showSlide(currentSlideIndex);
+        }
+
+        function currentSlide(n) {
+            currentSlideIndex = n;
+            showSlide(currentSlideIndex);
+        }
+
+        // Auto-play carousel
+        setInterval(() => {
+            currentSlideIndex++;
+            showSlide(currentSlideIndex);
+        }, 5000);
+
+        // Enable smooth scrolling only for in-page anchor links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(26, 26, 26, 0.95)';
+            } else {
+                header.style.backgroundColor = 'var(--primary-color)';
+            }
+        });
+    </script>
+</body>
+</html>

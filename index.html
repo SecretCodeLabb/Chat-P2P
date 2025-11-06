@@ -1,164 +1,136 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CHAT P2P — Inicio</title>
-  <link rel="icon" type="image/png" href="talleres imagenes/logos/Pj Semillero.png">
-  <link rel="stylesheet" href="styles.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat P2P - Inicio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logos\Logo semillero.png" type="image/png">
+
 </head>
 <body>
-  <header class="header">
-    <div class="nav-container">
-      <a href="index.html" class="logo">
-  <img src="talleres imagenes/logos/Logo semillero.png" alt="Logo Chat P2P" class="logo-img">
-  <span>CHAT P2P Inteligencia popular</span>
-</a>
-
-      <nav>
-        <ul class="nav-menu">
-          <li><a href="index.html" class="nav-link active">INICIO</a></li>
-          <li><a href="about.html" class="nav-link">NOSOTROS</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main class="main-content">
-    <section class="hero">
-      <div class="hero-content">
-        <h1>CHAT P2P</h1>
-        <h2>Inteligencia Popular</h2>
-        <p> es una iniciativa de investigación y creación que tiene como objetivo principal democratizar y territorializar el conocimiento en arte y tecnología.</p>
-      </div>
-    </section>
-
-    <section class="gallery-container">
-      <h2 class="section-title">NUESTRO TRABAJO</h2>
-      <div class="gallery">
-        <div class="gallery-item size-large" data-id="1">
-          <div class="newspaper-clip"></div>
-          <div class="item-content">
-            <img src="talleres imagenes\IMG_0867.JPG" alt="Proyecto 1" class="item-image">
-            <div class="item-overlay">
-              <div class="overlay-text">
-                <h3>La Tronadora</h3>
-                <p>Ver más detalles</p>
-              </div>
-            </div>
-          </div>
-          <div class="item-info">
-            <h3>Conoce LA TRONADORA</h3>
-            <p>LA TRONADORA es la celula de trabajo que nos permite desplazarnos y hacer diferentes talleres y actividades en diferentes ubicaciones.Conoce sobre el proceso de creacion.</p>
-            <p>Conoce sobre el proceso de creaccion de LA TRONADORA</p>
-            <span class="item-tag">DIGITAL</span>
-          </div>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="brand">
+                <img src="logos/Logo semillero.png" alt="Art Collective logo" class="brand-logo" onerror="this.style.display='none'">
+                <span class="brand-title">CHAT P2P </span>
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav>
+                <ul id="primary-menu" class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="about.html">Conocenos</a></li>
+                    <li><a href="gallery.html">Talleres y trabajos</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <div class="gallery-item size-medium" data-id="2">
-          <div class="newspaper-clip"></div>
-          <div class="item-content">
-            <video class="item-video" muted loop>
-              <source src="talleres imagenes\videoprueba.mp4" type="video/mp4">
+    <main>
+        <section class="hero">
+            <video class="hero-video" autoplay muted loop playsinline poster="media/hero-poster.jpg" aria-hidden="true">
+                <source src="IMG_2308.MOV" type="video/mp4">
             </video>
-            <div class="item-overlay">
-              <div class="overlay-text">
-                <h3>CHAT P2P</h3>
-                <p>Ver más detalles</p>
-              </div>
+            <div class="hero-content">
+                <h1>CHAT P2P</h1>
+                <p>Es una iniciativa de investigacion y creacion que tiene como objetivo prinipal democratizar y territorializar el onoimiento en arte popular y tecnologia.</p>
             </div>
-          </div>
-          <div class="item-info">
-            <h3>Conoce mas sobre el proyecto chat P2P</h3>
-            <p>Chat P2P – Inteligencia Popular es una iniciativa de investigación y creación que busca democratizar y territorializar el conocimiento en arte y tecnología.</p>
-            <span class="item-tag">VIDEO</span>
-          </div>
-        </div>
+        </section>
 
-    </section>
-    <!-- SECTION: Hero Carrusel con texto fijo -->
-<section class="carousel-hero" aria-label="Collage experimental">
-  <div class="carousel" id="heroCarousel">
-    <div class="carousel-track">
-      <img class="carousel-slide" src="talleres imagenes/carrusel/Screenshot 2025-09-18 142154.png" alt="Slide 1">
-      <img class="carousel-slide" src="talleres imagenes/carrusel/Screenshot 2025-09-18 142218.png" alt="Slide 2">
-      <img class="carousel-slide" src="talleres imagenes/carrusel/Screenshot 2025-09-18 142231.png" alt="Slide 3">
-    </div>
-  </div>
+        <!-- Media Cards Section: images or videos + text -->
+        <section class="cards-section" id="featured">
+            <h2 class="section-title">¿Que es Chat P2P?</h2>
+            <div class="card-grid">
+                <!-- Image Card -->
+                <article class="card media-card">
+                    <img class="card-media" src="IMG_0867.JPG" alt="Featured artwork 1">
+                    <div class="card-content">
+                        <h3 class="card-title">LA TRONADORA</h3>
+                        <p class="card-text">LA TRONADORA es la celula de trabajo que nos permite desplazarnos y hacer diferentes talleres y actividades en diferentes ubicaciones.Conoce sobre el proceso de creacion.</p>
+                        <h4><a href="la_tronadora.html">Mas informacion</a></h4>
+                    </div>
+                </article>
+                
 
-  <!-- Texto fijo encima del carrusel -->
-  <div class="carousel-overlay">
-    <h2 class="carousel-title">
-      <span>Video</span>
-      <span>Mapping</span>
-    </h2>
-    <p class="carousel-subtitle">
-      Este taller propone una inmersión creativa donde los participantes
-      construirán la narrativa de su barrio a través de la creación de un
-      videomapping
-    </p>
+                <article class="card media-card">
+                    
+                    <div class="card-content">
+                        <img class="card-media" src="fanzineImagenes/Fanzine modelados sensoriales_Mesa de trabajo 1.jpg" alt="Featured artwork 1">
+                        <h3 class="card-title">Fanzine Chat P2P</h3>
+                        <p class="card-text">Un fanzine que recolecta.......</p>
+                        <h4><a href="massobreproyecto.html">Mas informacion</a></h4>
+                    </div>
+                </article>
 
-    <!-- líneas decorativas tipo guía (opcionales) -->
-    <div class="overlay-lines" aria-hidden="true"></div>
-  </div>
-</section>
+                <article class="card media-card">
+                    
+                    <div class="card-content">
+                        <img class="card-media" src="fanzineImagenes\Fanzine modelados sensoriales-09 (1).jpg" alt="Featured artwork 1">
+                        <h3 class="card-title">Santo </h3>
+                        <p class="card-text">Conoce al santo de interacion digital</p>
+                        <h4><a href="santo.html">Mas informacion</a></h4>
+                    </div>
+                </article>
 
-  </main>
-
-  <!-- Modal -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <button class="modal-close" onclick="closeModal()">&times;</button>
-      <div id="modal-body"></div>
-    </div>
-  </div>
-
-    <section class="gallery-container">
-      <h2 class="section-title">TALLERES</h2>
-      <div class="gallery">
-        <div class="gallery-item size-large" data-id="w1">
-          <div class="newspaper-clip"></div>
-          <div class="item-content">
-            <img src="talleres imagenes/DSC_0082.JPG" alt="Taller 1" class="item-imagetalleres">
-            <div class="item-overlay">
-              <div class="overlay-text">
-                <h3>Kewpies</h3>
-                <p>Ver más detalles</p>
-              </div>
+                
             </div>
-          </div>
-          <div class="item-info">
-            <h3>Taller de pintura de Kewpies</h3>
-            <p>Conoce como transformar los kewpies de nuestro personaje del semillero utilizando porcelanicron y pintura.</p>
-            <span class="item-tag">Kewpies</span>
-          </div>
-        </div>
+        </section>
 
-        <div class="gallery-item size-medium" data-id="w2">
-          <div class="newspaper-clip"></div>
-          <div class="item-content">
-            <img src="talleres imagenes\Screenshot 2025-09-18 145526.png" alt="Taller 2" class="item-image">
-            <div class="item-overlay">
-              <div class="overlay-text">
-                <h3>Poster</h3>
-                <p>Ver más detalles</p>
-              </div>
+        
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://www.instagram.com/realidades_mutantes/">Instagram</a>
             </div>
-          </div>
-          <div class="item-info">
-            <h3>Taller de poster experimental</h3>
-            <p>Usa diferentes tecnicas para crear tu poster.</p>
-            <span class="item-tag">Poster</span>
-          </div>
-        </div>
+            <p>&copy; 2025 Modelado sensorial realidades mutantes - Chat P2P Inteligencia Popular</p>        </div>
+    </footer>
 
-      </div>
-    </section>
+    <script>
+        // Mobile menu toggle
+        (function() {
+            const toggle = document.querySelector('.nav-toggle');
+            const menu = document.getElementById('primary-menu');
+            if (toggle && menu) {
+                toggle.addEventListener('click', () => {
+                    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+                    toggle.setAttribute('aria-expanded', String(!expanded));
+                    menu.classList.toggle('open');
+                });
+            }
+        })();
 
-  <footer class="footer">
-    <p>&copy; 2025 Semillero Modelado sensorial: Realidades mutantes.</p>
-  </footer>
+        // Enable smooth scrolling only for in-page anchor links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
 
-  <script src="script.js"></script>
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(26, 26, 26, 0.95)';
+            } else {
+                header.style.backgroundColor = 'var(--primary-color)';
+            }
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chat P2P - Detalle</title>
+  <link rel="icon" href="logos/Logo semillero.png" type="image/png">
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* === Bloque de detalle de imagen (añadido) === */
+    .detail-section{
+      padding: 4rem 2rem;
+      background: var(--light-gray, #f5f5f5);
+    }
+    .detail-wrap{
+      width: min(1100px, 100%);
+      margin: 0 auto;
+      display: grid;
+      gap: 2rem;
+    }
+    .media-frame{
+      background: #000;
+      border: 10px solid #fff;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.10);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    /* La imagen manda su propio alto según su proporción */
+    .detail-media{
+      width: 100%;
+      height: auto;         /* mantiene proporción sin deformar */
+      display: block;
+      object-fit: contain;  /* no recorta */
+      aspect-ratio: auto;   /* usa el ratio natural si está disponible */
+    }
+    .detail-content{
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      padding: 1.5rem 1.5rem 1.75rem;
+    }
+    .detail-title{
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      color: var(--primary-color, #1a1a1a);
+      letter-spacing: 1px;
+      margin-bottom: .5rem;
+    }
+    .detail-sub{
+      color: var(--secondary-color, #d4af37);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      letter-spacing: .5px;
+    }
+    .detail-meta{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: .75rem 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .meta-item{
+      background: #fafafa;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: .75rem .9rem;
+      font-size: .95rem;
+      color: #555;
+    }
+    .detail-text{
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #444;
+      margin-top: .5rem;
+    }
+    .detail-text + .detail-text{ margin-top: .9rem; }
+    .detail-tags{
+      display: flex; flex-wrap: wrap; gap: .5rem;
+      margin-top: 1.2rem;
+    }
+    .tag{
+      font-size: .85rem;
+      padding: .35rem .6rem;
+      background: #f1f1f1;
+      border: 1px solid #e5e5e5;
+      border-radius: 999px;
+      color: #555;
+    }
+    .detail-credits{
+      margin-top: 1.25rem;
+      font-size: .92rem;
+      color: #666;
+    }
+    @media (min-width: 920px){
+      .detail-wrap{
+        grid-template-columns: 1.1fr .9fr;
+        align-items: start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <a href="index.html" class="brand">
+        <img src="logos/Logo semillero.png" alt="Art Collective logo" class="brand-logo" onerror="this.style.display='none'">
+        <span class="brand-title">CHAT P2P </span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <nav>
+        <ul id="primary-menu" class="nav-menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="about.html">Conocenos</a></li>
+          <li><a href="gallery.html">Talleres y trabajos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main style="margin-top:80px;">
+    <section class="detail-section">
+      <div class="detail-wrap">
+        <!-- Media adaptable -->
+        <figure class="media-frame">
+          <!-- Reemplaza el src por tu imagen (cualquier formato/aspecto) -->
+          <img class="detail-media" src="fanzineImagenes/Fanzine modelados sensoriales-09 (1).jpg" alt="Imagen del proyecto / taller">
+        </figure>
+
+        <!-- Textos descriptivos -->
+        <article class="detail-content">
+          <h1 class="detail-title">San pixelito</h1>
+          <div class="detail-sub">Santo de interaccion digital/ Proyecto — Chat P2P</div>
+
+          <div class="detail-meta">
+            <div class="meta-item"><strong>Ubicación:</strong> Tecnológico de Artes Débora Arango</div>
+            <div class="meta-item"><strong>Fecha creacion:</strong> Noviembre, 2025</div>
+            <div class="meta-item"><strong>Poderes:</strong> Blender no se cierra</div>
+          </div>
+
+          <p class="detail-text">
+            Breve descripción: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the  type specimen book. 
+          <p class="detail-text">
+            Detalle conceptual: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the  type specimen book
+          </p>
+          <p class="detail-text">
+            Resultados: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the  type specimen book
+          </p>
+
+          <div class="detail-tags">
+            <span class="tag">#ArtePopular</span>
+            <span class="tag">#Interacion</span>
+            <span class="tag">#Santidad</span>
+            <span class="tag">#InvestigaciónCreación</span>
+          </div>
+
+          <div class="detail-credits">
+            <strong>Créditos:</strong> Equipo Chat P2P — Modelado Sensorial · Realidades Mutantes.
+          </div>
+        </article>
+      </div>
+    </section>
+        <!-- === Bloque de tarjetas pequeñas === -->
+    <section style="padding:3rem 2rem; background:var(--light-gray);">
+      <div style="width:min(1100px,100%); margin:0 auto; display:grid; gap:1.5rem; grid-template-columns:repeat(auto-fit, minmax(250px,1fr));">
+
+        <article style="background:#fff; border-radius:12px; box-shadow:0 10px 25px rgba(0,0,0,0.08); padding:1rem 1.25rem;">
+          <h3 style="color:var(--primary-color); margin-bottom:.45rem;">Oracion 1</h3>
+          <p style="color:#555; font-size:.97rem; line-height:1.55;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the  type specimen bookLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the  type specimen book</p>
+        </article>
+
+        <article style="background:#fff; border-radius:12px; box-shadow:0 10px 25px rgba(0,0,0,0.08); padding:1rem 1.25rem;">
+          <h3 style="color:var(--primary-color); margin-bottom:.45rem;">Oracion 2</h3>
+          <p style="color:#555; font-size:.97rem; line-height:1.55;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the  type specimen bookLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the  type specimen book</p>
+        </article>
+
+        <article style="background:#fff; border-radius:12px; box-shadow:0 10px 25px rgba(0,0,0,0.08); padding:1rem 1.25rem;">
+          <h3 style="color:var(--primary-color); margin-bottom:.45rem;">Oracion 3</h3>
+          <p style="color:#555; font-size:.97rem; line-height:1.55;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the  type specimen bookLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the  type specimen book</p>
+        </article>
+
+        <article style="background:#fff; border-radius:12px; box-shadow:0 10px 25px rgba(0,0,0,0.08); padding:1rem 1.25rem;">
+          <h3 style="color:var(--primary-color); margin-bottom:.45rem;">Oracion 4</h3>
+          <p style="color:#555; font-size:.97rem; line-height:1.55;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the  type specimen bookLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the  type specimen book</p>
+        </article>
+
+      </div>
+    </section>
+    <!-- === /FIN tarjetas pequeñas === -->
+
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="https://instagram.com/realidades_mutantes">Instagram</a>
+      </div>
+      <p>&copy; 2025 Modelado sensorial realidades mutantes - Chat P2P Inteligencia Popular</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    (function() {
+      const toggle = document.querySelector('.nav-toggle');
+      const menu = document.getElementById('primary-menu');
+      if (toggle && menu) {
+        toggle.addEventListener('click', () => {
+          const expanded = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', String(!expanded));
+          menu.classList.toggle('open');
+        });
+      }
+    })();
+
+    // Smooth scrolling only for in-page anchor links
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Header background on scroll
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 100) {
+        header.style.backgroundColor = 'rgba(26, 26, 26, 0.95)';
+      } else {
+        header.style.backgroundColor = 'var(--primary-color)';
+      }
+    });
+  </script>
+</body>
+</html>

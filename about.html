@@ -1,92 +1,169 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CHAT P2P — Sobre el Semillero</title>
-  <link rel="icon" type="image/png" href="talleres imagenes/logos/Pj Semillero.png">
-  <!-- Estilos globales del proyecto -->
-  <link rel="stylesheet" href="styles.css"/>
-  <!-- Estilos específicos de esta página -->
-  <link rel="stylesheet" href="about.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat P2P - Conocenos</title>
+    <link rel="icon" href="logos\Logo semillero.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header coherente con el resto del sitio -->
-  <header class="header">
-    <div class="nav-container">
-      <a href="index.html" class="logo">
-        <img src="talleres imagenes/logos/Logo semillero.png" alt="Logo Chat P2P" class="logo-img">
-        <span>CHAT P2P Inteligencia popular</span>
-      </a>
-      <nav>
-        <ul class="nav-menu">
-          <li><a href="index.html" class="nav-link">INICIO</a></li>
-          <li><a href="about.html" class="nav-link active">NOSOTROS</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- HERO / INTRO: sustituye referencias a The Line por identidad del semillero -->
-  <section class="hero">
-    <div class="hero__media" role="img" aria-label="Semillero en territorio"></div>
-    <div class="hero__cap container">
-      <h1 class="hero__title">Semillero Modelado Sensorial </h1>
-      <p class="hero__lead">
-        Arte + tecnología en territorio: collage, fanzines VR/AR, videomapping y juguetes. 
-        
-      </p>
-     
-    </div>
-  </section>
-
-  <!-- SECCIÓN: Qué hacemos (3 bloques) -->
-  <section class="container blocks">
-    <article class="block">
-      <h2>Laboratorios y talleres</h2>
-      <p>Los talleres y laboratorios de Chat P2P – Inteligencia Popular son espacios de creación colectiva donde arte, tecnología y cultura popular se encuentran para transformar la manera en que las comunidades narran su territorio.</p>
-      <p>El taller de Video Mapping invita a construir y alterar el paisaje mediante la proyección de imágenes y sonidos creados con tecnología MIDI. A partir de los ruidos y melodías del entorno, se generan obras audiovisuales que transforman muros y espacios en narrativas vivas</p>
-    </article>
-    
-    <article class="block">
-      <h2>Democratizacion</h2>
-      <p>El proyecto Chat P2P – Inteligencia Popular nace con el propósito de democratizar y territorializar el conocimiento en arte y tecnología, llevando estas herramientas a comunidades que históricamente han tenido un acceso limitado a ellas. Para lograrlo, el proyecto se organiza como una célula de trabajo itinerante: un módulo móvil y colaborativo que se desplaza por distintos territorios —barriales y veredales— del municipio de Envigado, permitiendo que la creación artística y la experimentación tecnológica salgan del aula y se instalen en el espacio público CHAT P2P.</p>
-    </article>
-  </section>
-
-  <!-- SECCIÓN: Nuestro equipo (cards dinámicas) -->
-  <section class="container team" id="equipo">
-    <header class="team__head">
-      <h2>Nuestro equipo</h2>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="brand">
+                <img src="logos/Logo semillero.png" alt="Art Collective logo" class="brand-logo" onerror="this.style.display='none'">
+                <span class="brand-title">CHAT P2P </span>
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav>
+                <ul id="primary-menu" class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="about.html">Conocenos</a></li>
+                    <li><a href="gallery.html">Talleres y trabajos</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <div class="team__grid" id="teamGrid" aria-live="polite"></div>
-  </section>
 
-  <!-- SECCIÓN: Manifiesto breve -->
-  
+    <main>
+        <!-- Members Grid Section with Instagram links -->
+        <section class="cards-section" id="members">
+            <h2 class="section-title">Miembros del proyecto ChatP2P</h2>
+            <div class="member-grid">
+                <article class="card member-card">
+                    <img class="member-photo" src="fanzineImagenes/nnprofile.jpg" alt="Member 1 photo">
+                    <div class="card-content">
+                        <h3 class="card-title">Hernan Rodriguez</h3>
+                        <div class="member-role">Lider del semillero</div>
+                        <p class="card-text">Explores color relationships and spatial narratives through layered oil techniques.</p>
+                        <div class="member-links"><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></div>
+                    </div>
+                </article>
+                <article class="card member-card">
+                    <img class="member-photo" src="fanzineImagenes/nnprofile.jpg" alt="Member 1 photo">
+                    <div class="card-content">
+                        <h3 class="card-title">Karol Rodriguez</h3>
+                        <div class="member-role">Lider sel de semillero</div>
+                        <p class="card-text">Explores color relationships and spatial narratives through layered oil techniques.</p>
+                        <div class="member-links"><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></div>
+                    </div>
+                </article>
+                <article class="card member-card">
+                    <img class="member-photo" src="fanzineImagenes/nnprofile.jpg" alt="Member 1 photo">
+                    <div class="card-content">
+                        <h3 class="card-title">Daniel Oquendo</h3>
+                        <div class="member-role">Programador pagina web</div>
+                        <p class="card-text">Encargado de programar y diseñar la pagina web, inlcuyendo los diferentes articules e informacion del proyecto Chat P2P.</p>
+                        <div class="member-links"><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></div>
+                    </div>
+                </article>
+                <article class="card member-card">
+                    <img class="member-photo" src="fanzineImagenes/nnprofile.jpg" alt="Member 1 photo">
+                    <div class="card-content">
+                        <h3 class="card-title">Maria Jose Valencia</h3>
+                        <div class="member-role">Community manager</div>
+                        <p class="card-text">Encargada de manejar las publicaciones en redes sociales asi como de la creacion de contenido del proyecto Chat P2P</p>
+                        <div class="member-links"><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></div>
+                    </div>
+                </article>
+                <article class="card member-card">
+                    <img class="member-photo" src="fanzineImagenes/nnprofile.jpg" alt="Member 1 photo">
+                    <div class="card-content">
+                        <h3 class="card-title">Santiago Zapata</h3>
+                        <div class="member-role">Community manager</div>
+                        <p class="card-text">Encargada de manejar las publicaciones en redes sociales asi como de la creacion de contenido del proyecto Chat P2P</p>
+                        <div class="member-links"><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></div>
+                    </div>
+                </article>
+                <article class="card member-card">
+                    <img class="member-photo" src="fanzineImagenes/nnprofile.jpg" alt="Member 1 photo">
+                    <div class="card-content">
+                        <h3 class="card-title">Daniela Gil</h3>
+                        <div class="member-role">Productora editorial</div>
+                        <p class="card-text">Encargada de la creacion del fanzine del proyecto Chat P2P.</p>
+                        <div class="member-links"><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></div>
+                    </div>
+                </article>
+                <article class="card member-card">
+                    <img class="member-photo" src="fanzineImagenes/nnprofile.jpg" alt="Member 1 photo">
+                    <div class="card-content">
+                        <h3 class="card-title">Milena Muñoz</h3>
+                        <div class="member-role">Productora editorial</div>
+                        <p class="card-text">Encargada de la creacion del fanzine del proyecto Chat P2P.</p>
+                        <div class="member-links"><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></div>
+                    </div>
+                </article>
 
-  <!-- SECCIÓN: Contacto / vínculos -->
-  <section class="container contact">
-  <h2>Redes Sociales</h2>
-  <div class="contact__grid">
-    
+            </div>
+            <div style="text-align:center; margin-top:1.5rem">
+                <a href="https://www.instagram.com/realidades_mutantes/" target="_blank" rel="noopener" style="color: var(--secondary-color); text-decoration: none;">Siguenos en Instagram →</a>
+            </div>
+        </section>
+        <section class="about">
+            <h2 class="section-title">Mas sobre el proyecto</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>El proyecto Chat P2P – Inteligencia Popular nace con el propósito de democratizar y territorializar el conocimiento en arte y tecnología, llevando estas herramientas a comunidades que históricamente han tenido un acceso limitado a ellas. Para lograrlo, el proyecto se organiza como una célula de trabajo itinerante: un módulo móvil y colaborativo que se desplaza por distintos territorios —barriales y veredales— del municipio de Envigado, permitiendo que la creación artística y la experimentación tecnológica salgan del aula y se instalen en el espacio público CHAT P2P.</p>
+                </div>
+                <img src="Screenshot 2025-09-18 145526.png" alt="Art Collective History" class="about-image">
+            </div>
+        </section>
 
-    <!-- Botón Instagram -->
-    <a class="btn alt" href="https://instagram.com/realidades_mutantes" target="_blank" rel="noopener">
-      <img src="talleres imagenes/logos/icons8-instagram.svg" alt="Instagram" style="width:20px; height:20px;">
-      Instagram
-    </a>
-  </div>
-</section>
+    </main>
 
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://instagram.com/realidades_mutantes">Instagram</a>
+            </div>
+            <p>&copy; 2025 Modelado sensorial realidades mutantes - Chat P2P Inteligencia Popular</p>
+        </div>
+    </footer>
 
+    <script>
+        // Mobile menu toggle
+        (function() {
+            const toggle = document.querySelector('.nav-toggle');
+            const menu = document.getElementById('primary-menu');
+            if (toggle && menu) {
+                toggle.addEventListener('click', () => {
+                    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+                    toggle.setAttribute('aria-expanded', String(!expanded));
+                    menu.classList.toggle('open');
+                });
+            }
+        })();
 
-  <footer class="footer">
-    <div class="container">
-      <small>© CHAT P2P — Inteligencia popular. Semillero Modelado Sensorial — Realidades Mutantes.</small>
-    </div>
-  </footer>
+        // Enable smooth scrolling only for in-page anchor links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
 
-  <script src="about.js"></script>
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(26, 26, 26, 0.95)';
+            } else {
+                header.style.backgroundColor = 'var(--primary-color)';
+            }
+        });
+    </script>
 </body>
 </html>
